@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>error</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .t5{
+            top: 100px;
+            left: 100px;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-image: linear-gradient(45deg,#52ffaf,#2196f3);
+            box-shadow: 0 1px 2px 1px #52ffafa3;
+        }
+
+        .t5::before,
+        .t5::after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            display: block;
+            margin-left: -9px;
+            border-radius: 3px;
+            width: 18px;
+            height: 3px;
+            background-color:white;
+            transition: all .2s ease;
+        }
+
+        .t5::before{
+            transform: translateY(12px);
+            filter: drop-shadow(0 6px 0 white);
+        }
+        .t5::after{
+            transform: translateY(24px);
+        }
+        .t5:hover::before{
+            filter: none;
+            transform: translateY(18px)rotate(-45deg);
+        }
+        .t5:hover::after{
+            transform: translateY(18px)rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<div  class="t5"></div>
+</body>
+</html>
